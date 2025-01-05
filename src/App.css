@@ -2,8 +2,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Public Sans', Arial, sans-serif; /* Updated to use Public Sans */
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --theme-color: #7cb932;
@@ -33,9 +35,16 @@ body {
   transform: translateX(-100%);
 }
 
+
 .side-navbar.open {
-  transform: translateX(0);
+  transform: translateX(0); /* Sidebar visible */
 }
+
+.side-navbar.closed {
+  transform: translateX(-100%); /* Sidebar hidden */
+  transition: transform 0.3s ease-in-out;
+}
+
 
 .side-navbar ul {
   list-style: none;
@@ -143,7 +152,9 @@ body {
 .addpage-content {
   padding: 20px;
 }
-
+.width-50 {
+  width: 50%;
+}
 /* Responsive Design */
 @media (min-width: 768px) {
   .side-navbar {
@@ -153,6 +164,7 @@ body {
   .dashboard-main-content.sidebar-open {
     margin-left: 250px;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -170,5 +182,8 @@ body {
 
   .sidebar-toggle-btn {
     display: block;
+  }
+  .width-50 {
+    width: 80%;
   }
 }

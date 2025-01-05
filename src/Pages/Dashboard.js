@@ -6,7 +6,7 @@ const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth >= 768);
 
   const handleSidebarToggle = () => {
-    setIsSidebarOpen(prevState => !prevState); 
+    setIsSidebarOpen((prevState) => !prevState); // Toggle the sidebar state
   };
 
   useEffect(() => {

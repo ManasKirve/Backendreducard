@@ -63,9 +63,9 @@ const AddNewsUser = () => {
             <SideBarNavbar isSidebarOpen={isSidebarOpen} />
             <div className={`dashboard-main-content ${isSidebarOpen ? "sidebar-open" : ""}`}>
                 <TopNavbar onToggle={handleSidebarToggle} />
-                <div className="d-flex justify-content-center align-items-center  ">
-                    <div className=" mt-4 d-flex justify-content-center  align-items-center ">
-                        <div className="card shadow w-50 p-4">
+                <div className="w-100  ">
+                    <div className=" my-4 d-flex justify-content-center  align-items-center ">
+                        <div className="card shadow width-50 p-4">
                             <h2 className="mb-3">Add New User</h2>
 
                             {error && <div className="alert alert-danger">{error}</div>}
